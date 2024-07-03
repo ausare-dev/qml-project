@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-
+import "statusEnum.js" as StatusEnum
 Page {
     id: page2
     padding: 15
@@ -9,7 +9,7 @@ Page {
 
     ColumnLayout {
         anchors.fill: parent
-        spacing: 10
+        spacing: 30
 
         RowLayout {
             spacing: 20
@@ -26,7 +26,7 @@ Page {
 
                 Text {
                     anchors.centerIn: parent
-                    text: "Запущена"
+                    text: StatusEnum.getStatusText(StatusEnum.StatusEnum.Running)
                     font.pointSize: 16
                     font.bold: true
                     color: "white"
@@ -37,53 +37,166 @@ Page {
         ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.alignment: Qt.AlignHCenter
-
+            spacing: 30
             Text {
-                text: "Микрофон " + microphoneData.microphone + ": " + microphoneData.type
-                font.pointSize: 14
-            }
+                            text: "Статус элементов:"
+                            font.pointSize: 16
+                        }
+            Rectangle {
+                Layout.fillHeight: true;
+                Layout.fillWidth: true;
+                border.color: "#ADD8E6"
+                Rectangle {
+                    anchors.margins: 10
+                    color: "#F0F0F0"
+                    anchors.fill: parent
+                    Row {
+                        spacing: 10
+                        anchors.right: parent.right;
+                        rightPadding: 15
+                        topPadding: 15
+                    Text {
 
-            Text {
-                text: microphoneData.status
-                font.pointSize: 14
-            }
-
-            Text {
-                text: "Вероятность сбоя - " + microphoneData.probability
-                font.pointSize: 14
-            }
-
-            Image {
-                source: {
-                    switch (microphoneData.status) {
-                        case "Работает нормально":
-                            return "path/to/work.svg";
-                        case "Вероятен сбой":
-                            return "path/to/warning.svg";
-                        case "Сбой":
-                            return "path/to/error.svg";
-                        case "Микрофон не подключен":
-                            return "path/to/not_work.svg";
-                        default:
-                            return "";
+                        text: {
+                            if (microphoneData.status !== "Микрофон не подключен") {
+                                return "Последний сбой был зафиксирован: " + microphoneData.lastUpdate;
+                            } else {
+                                return "Последний сбой был зафиксирован: неизвестно";
+                            }
+                        }
+                        font.pointSize: 14
                     }
+
+                    Button {
+                                    width: 40
+                                    height: 40
+                                    icon.name: "close"
+                                    icon.source: "close.svg"
+                                    icon.color: "#ADD8E6"
+                                    background: Rectangle {
+                                        color: "white"
+                                        border.color: "#ADD8E6"
+                                    }
+                                    MouseArea {
+                                            anchors.fill: parent
+                                            onClicked: {
+                                                stackView.push(Qt.resolvedUrl("Page1.qml"))
+                                            }
+                                        }
+                                    Layout.alignment: Qt.AlignVCenter
+                                }
+                    }
+                    Item {
+                        anchors.fill: parent
+                        anchors.margins: 20
+
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        spacing: 30
+                    Text {
+                        text: "Микрофон " + microphoneData.microphone + ": " + microphoneData.type
+                        font.pointSize: 14
+                    }
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        spacing: 10
+                    Row {
+                        spacing: 20
+
+                    Image {
+                        source: {
+                            switch (microphoneData.status) {
+                                case "Работает нормально":
+                                    return "work.svg";
+                                case "Вероятен сбой":
+                                    return "warning.svg";
+                                case "Сбой":
+                                    return "error.svg";
+                                case "Микрофон не подключен":
+                                    return "not_work.svg";
+                                default:
+                                    return "";
+                            }
+                        }
+                        width: 50
+                        height: 50
+                    }
+                    Text {
+                        text: microphoneData.status
+                        font.pointSize: 30
+                        font.bold: true;
+                    }
+                    }
+
+                    Text {
+                        text: {
+                            if (microphoneData.status !== "Микрофон не подключен") {
+                                return "Вероятность сбоя - " + microphoneData.probability;
+                            } else {
+                                return "Вероятность сбоя - неизвестно";
+                            }
+                        }
+                        font.pointSize: 14
+                    }
+                    }
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        spacing: 1
+                    Text {
+                        text: "Присвоенное устройство для анализа: " + microphoneData.analysisDevice
+                        font.pointSize: 14
+                        leftPadding: 30
+                    }
+                    Row {
+
+                        spacing: 150
+                    Image {
+                        source: "imge.png"
+                    }
+                    ColumnLayout {
+                        anchors.verticalCenter: parent.verticalCenter
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                    Button {
+                        icon.name: "play"
+                        icon.source: "play.svg"
+                        icon.color: "#ADD8E6"
+                        icon.height: 50
+                        icon.width: 50
+
+                        background: Rectangle {
+                            color: "white"
+                            border.color: "#ADD8E6"
+                        }
+                         Layout.alignment: Qt.AlignHCenter
+
+                    }
+
+
+                        Text {
+                            text: "Прослушать звук"
+                            font.pointSize: 16
+                        }
+
+
+                    }
+                    }
+                    }
+
+
+
+
                 }
-                width: parent.width * 0.8
-                height: 200
+                    }
+
+                }
             }
 
-            Button {
-                text: "Прослушать звук"
-                Layout.alignment: Qt.AlignHCenter
-                // Добавьте логику для прослушивания звука при нажатии на кнопку
-            }
         }
 
-        Button {
-            text: "Next Page"
-            Layout.alignment: Qt.AlignHCenter
-            onClicked: stackView.push(Qt.resolvedUrl("Page3.qml"))
-        }
+
     }
 }
