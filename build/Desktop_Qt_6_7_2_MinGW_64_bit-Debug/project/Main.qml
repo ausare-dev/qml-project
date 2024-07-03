@@ -16,6 +16,21 @@ ApplicationWindow {
         id: stackView
         anchors.fill: parent
         initialItem: Page1 { }
+        pushEnter: Transition {
+                    NumberAnimation {
+                        properties: "x"
+                        duration: 10
+                        from: stackView.width
+                        to: 0
+                    }
+                    NumberAnimation {
+                        properties: "opacity"
+                        duration: 10
+                        from: 0
+                        to: 1
+                    }
+                }
+
     }
 
     ListModel {
