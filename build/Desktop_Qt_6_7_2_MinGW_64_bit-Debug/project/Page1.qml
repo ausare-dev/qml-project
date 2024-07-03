@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import "statusEnum.js" as StatusEnum
 
 Page {
     id: page1
@@ -36,7 +37,7 @@ Page {
                 color: "#ADD8E6"
                 Text {
                     anchors.centerIn: parent
-                    text: "Запущена"
+                    text: StatusEnum.getStatusText(StatusEnum.StatusEnum.Running)
                     font.pointSize: 16
                     font.bold: true
                     color: "white"
@@ -53,8 +54,9 @@ Page {
             border.color: "#ADD8E6"
             clip: true;
             ScrollView {
-            width: parent.width
-            height: parent.height
+                anchors.fill: parent
+                contentWidth: parent.width
+                contentHeight: parent.height
             GridLayout {
                 id: grid
                 columns: 2
@@ -63,17 +65,11 @@ Page {
                 Repeater {
                     model: microphoneModel
                     Item {
-                        MouseArea {
-                                anchors.fill: parent
-                                onClicked: {
-                                    stackView.push(Qt.resolvedUrl("Page2.qml"), { microphoneData: model })
-                                }
-                            }
-                        width: grid.width/2-5
+
+                        Layout.minimumWidth: grid.width / grid.columns - 5
                         height: grid.height/2
                         Rectangle {
-                            width: parent.width
-                            height: parent.height
+                            anchors.fill: parent
                             color: {
                                     switch (model.status) {
                                         case "Работает нормально":
@@ -86,6 +82,12 @@ Page {
                                             return "lightgray";
                                         default:
                                             return "lightgray";
+                                    }
+                                }
+                            MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        stackView.push(Qt.resolvedUrl("Page2.qml"), { microphoneData: model })
                                     }
                                 }
                             Item {
