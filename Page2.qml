@@ -163,6 +163,7 @@ Page {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                     Button {
+                        id: playButton
                         icon.name: "play"
                         icon.source: "play.svg"
                         icon.color: "#ADD8E6"
@@ -170,11 +171,27 @@ Page {
                         icon.width: 50
 
                         background: Rectangle {
+                            id: buttonBackground
                             color: "white"
                             border.color: "#ADD8E6"
                         }
                          Layout.alignment: Qt.AlignHCenter
-
+                         property bool isClicked: false
+                         MouseArea {
+                                        anchors.fill: parent
+                                        onClicked: {
+                                            playButton.isClicked = !playButton.isClicked
+                                            if (playButton.isClicked) {
+                                                buttonBackground.color = "#ADD8E6"
+                                                playButton.icon.color = "white"
+                                                buttonBackground.border.color = "white"
+                                            } else {
+                                                buttonBackground.color = "white"
+                                                playButton.icon.color = "#ADD8E6"
+                                                buttonBackground.border.color = "#ADD8E6"
+                                            }
+                                        }
+                                    }
                     }
 
 
