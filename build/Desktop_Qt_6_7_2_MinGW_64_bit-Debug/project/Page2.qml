@@ -6,7 +6,9 @@ Page {
     id: page2
     padding: 15
     property var microphoneData
-
+    background: Rectangle {
+                color: "white"
+            }
     ColumnLayout {
         anchors.fill: parent
         spacing: 30

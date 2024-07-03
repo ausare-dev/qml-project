@@ -6,6 +6,9 @@ import "statusEnum.js" as StatusEnum
 Page {
     id: page1
     padding: 15;
+    background: Rectangle {
+                color: "white"
+            }
     Rectangle {
         width: 200
         height: 30
