@@ -59,7 +59,7 @@ Page {
             ScrollView {
                 anchors.fill: parent
                 contentWidth: parent.width
-                contentHeight: parent.height
+                // contentHeight: parent.height
             GridLayout {
                 id: grid
                 columns: 2

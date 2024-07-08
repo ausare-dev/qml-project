@@ -1,23 +1,23 @@
 <RCC>
   <qresource prefix="/project/">
-    <file alias="Main.qml">C:/Users/Asain/Documents/project/Main.qml</file>
-    <file alias="Page1.qml">C:/Users/Asain/Documents/project/Page1.qml</file>
-    <file alias="Page2.qml">C:/Users/Asain/Documents/project/Page2.qml</file>
-    <file alias="Page3.qml">C:/Users/Asain/Documents/project/Page3.qml</file>
-    <file alias="data.js">C:/Users/Asain/Documents/project/data.js</file>
-    <file alias="statusEnum.js">C:/Users/Asain/Documents/project/statusEnum.js</file>
-    <file alias="close.svg">C:/Users/Asain/Documents/project/close.svg</file>
-    <file alias="warning.svg">C:/Users/Asain/Documents/project/warning.svg</file>
-    <file alias="error.svg">C:/Users/Asain/Documents/project/error.svg</file>
-    <file alias="not_work.svg">C:/Users/Asain/Documents/project/not_work.svg</file>
-    <file alias="work.svg">C:/Users/Asain/Documents/project/work.svg</file>
-    <file alias="restore.svg">C:/Users/Asain/Documents/project/restore.svg</file>
-    <file alias="mini.svg">C:/Users/Asain/Documents/project/mini.svg</file>
-    <file alias="imge.png">C:/Users/Asain/Documents/project/imge.png</file>
-    <file alias="play.svg">C:/Users/Asain/Documents/project/play.svg</file>
-    <file alias="statusHeight.svg">C:/Users/Asain/Documents/project/statusHeight.svg</file>
-    <file alias="statusMedium.svg">C:/Users/Asain/Documents/project/statusMedium.svg</file>
-    <file alias="statusLow.svg">C:/Users/Asain/Documents/project/statusLow.svg</file>
+    <file alias="Main.qml">C:/Users/Asain/projects/qml-project/Main.qml</file>
+    <file alias="Page1.qml">C:/Users/Asain/projects/qml-project/Page1.qml</file>
+    <file alias="Page2.qml">C:/Users/Asain/projects/qml-project/Page2.qml</file>
+    <file alias="Page3.qml">C:/Users/Asain/projects/qml-project/Page3.qml</file>
+    <file alias="data.js">C:/Users/Asain/projects/qml-project/data.js</file>
+    <file alias="statusEnum.js">C:/Users/Asain/projects/qml-project/statusEnum.js</file>
+    <file alias="src/img/imge.png">C:/Users/Asain/projects/qml-project/src/img/imge.png</file>
+    <file alias="close.svg">C:/Users/Asain/projects/qml-project/close.svg</file>
+    <file alias="warning.svg">C:/Users/Asain/projects/qml-project/warning.svg</file>
+    <file alias="error.svg">C:/Users/Asain/projects/qml-project/error.svg</file>
+    <file alias="not_work.svg">C:/Users/Asain/projects/qml-project/not_work.svg</file>
+    <file alias="work.svg">C:/Users/Asain/projects/qml-project/work.svg</file>
+    <file alias="restore.svg">C:/Users/Asain/projects/qml-project/restore.svg</file>
+    <file alias="mini.svg">C:/Users/Asain/projects/qml-project/mini.svg</file>
+    <file alias="play.svg">C:/Users/Asain/projects/qml-project/play.svg</file>
+    <file alias="statusHeight.svg">C:/Users/Asain/projects/qml-project/statusHeight.svg</file>
+    <file alias="statusMedium.svg">C:/Users/Asain/projects/qml-project/statusMedium.svg</file>
+    <file alias="statusLow.svg">C:/Users/Asain/projects/qml-project/statusLow.svg</file>
   </qresource>
 </RCC>
 

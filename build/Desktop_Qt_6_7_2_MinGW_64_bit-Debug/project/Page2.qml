@@ -156,7 +156,7 @@ Page {
 
                         spacing: 150
                     Image {
-                        source: "imge.png"
+                        source: "src/img/imge.png"
                     }
                     ColumnLayout {
                         anchors.verticalCenter: parent.verticalCenter
