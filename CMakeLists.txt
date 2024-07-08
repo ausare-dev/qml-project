@@ -21,6 +21,8 @@ qt_add_qml_module(appproject
         QML_FILES Page2.qml
         QML_FILES Page3.qml
         QML_FILES data.js
+        RESOURCES src/img/imge.png
+
         RESOURCES close.svg
         RESOURCES
         RESOURCES
@@ -33,7 +35,7 @@ qt_add_qml_module(appproject
         RESOURCES
         RESOURCES
         RESOURCES
-        RESOURCES imge.png
+
         RESOURCES play.svg
         RESOURCES statusHeight.svg
         RESOURCES statusMedium.svg
