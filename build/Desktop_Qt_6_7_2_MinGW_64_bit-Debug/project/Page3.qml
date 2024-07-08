@@ -70,7 +70,8 @@ Page {
                     ScrollView {
                         anchors.fill: parent
                                         contentWidth: parent.width
-                                        contentHeight: parent.height
+                                        // contentHeight: parent.height
+                                        ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
                         Column {
                             width: parent.width
 
@@ -181,11 +182,17 @@ Page {
                                     Rectangle {
                                         width: parent.width/5
                                         height: 55
+
+
                                         color: "transparent"
                                         border.color: "transparent"
 
                                         Row {
-                                           anchors.centerIn: parent
+                                            leftPadding: 50
+                                           anchors.verticalCenter: parent.verticalCenter
+
+
+
                                             spacing: 20
 
                                             Image {
@@ -194,10 +201,15 @@ Page {
                                                 source: model.probability.split('%')[0] > 60 ? "statusHeight.svg" : model.probability.split('%')[0] > 30 ? "statusMedium.svg" : "statusLow.svg"
                                                 height: 40
                                                 width: 40
+
                                             }
                                             Text {
+
                                                     text: model.probability.split('%')[0] > 60 ? "Высокий" : model.probability.split('%')[0] > 30 ? "Средний" : "Низкий"
                                                     font.pointSize: 13
+                                                     anchors.verticalCenter: parent.verticalCenter
+
+
                                                 }
                                         }
 

@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import "statusEnum.js" as StatusEnum
-
+import "data.js" as DataModel
 Page {
     id: page1
     padding: 15;
@@ -62,46 +62,35 @@ Page {
             clip: true;
             ScrollView {
                 ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-                // background: Rectangle {
-                //             color: "black"
-                //         }
-                // contentWidth: parent.width
-                // anchors.fill: parent
+
                 height: parent.height
                 width: parent.width
 
                 contentWidth: parent.width
-                contentHeight: 1144
-                // Layout.fillHeight: true;
-                //  Layout.fillWidth: true;
-                // Layout.fillWidth: true  // Используем Layout.fillWidth вместо anchors.fill
-                //            Layout.fillHeight: true
-
-
+                contentHeight: {
+                    if(DataModel.getLength()%2===0){
+                        return 143*DataModel.getLength()
+                    } else {
+                        return 143*(DataModel.getLength()+1)
+                    }
+                }
 
             GridLayout {
                 id: grid
                 columns: 2
                 anchors.fill: parent
-
-
-                // Rectangle {
-                //     // anchors.fill: parent
-
-                //     color: "black"
-                // }
-
-
-
                 anchors.margins: 10
 
                 Repeater {
                     model: microphoneModel
+                    anchors.top: parent.top
                     Item {
                         Layout.minimumWidth: grid.width / grid.columns - 5
+
                         height: 277
                         Rectangle {
                             anchors.fill: parent
+                            anchors.top: parent.top
                             color: {
                                     switch (model.status) {
                                         case "Работает нормально":
