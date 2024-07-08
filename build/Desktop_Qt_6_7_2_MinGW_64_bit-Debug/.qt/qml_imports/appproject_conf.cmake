@@ -1,4 +1,4 @@
-set(qml_import_scanner_imports_count 41)
+set(qml_import_scanner_imports_count 37)
 set(qml_import_scanner_import_0 "CLASSNAME;QtQuick2Plugin;LINKTARGET;Qt6::qtquick2plugin;NAME;QtQuick;PATH;C:/Qt/6.7.2/mingw_64/qml/QtQuick;PLUGIN;qtquick2plugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/;RELATIVEPATH;QtQuick;TYPE;module;")
 set(qml_import_scanner_import_1 "CLASSNAME;QtQmlMetaPlugin;LINKTARGET;Qt6::QmlMeta;NAME;QtQml;PATH;C:/Qt/6.7.2/mingw_64/qml/QtQml;PLUGIN;qmlmetaplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQml/;RELATIVEPATH;QtQml;TYPE;module;")
 set(qml_import_scanner_import_2 "CLASSNAME;QtQmlPlugin;LINKTARGET;Qt6::qmlplugin;NAME;QtQml.Base;PATH;C:/Qt/6.7.2/mingw_64/qml/QtQml/Base;PLUGIN;qmlplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQml/Base/;RELATIVEPATH;QtQml/Base;TYPE;module;")
@@ -36,8 +36,4 @@ set(qml_import_scanner_import_33 "NAME;statusEnum.js;PATH;C:/Users/Asain/project
 set(qml_import_scanner_import_34 "NAME;data.js;PATH;C:/Users/Asain/projects/qml-project/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/project/HomePage.qml/data.js;TYPE;javascript;")
 set(qml_import_scanner_import_35 "NAME;data.js;PATH;C:/Users/Asain/projects/qml-project/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/project/Main.qml/data.js;TYPE;javascript;")
 set(qml_import_scanner_import_36 "NAME;statusEnum.js;PATH;C:/Users/Asain/projects/qml-project/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/project/MicrophoneDetailsPage.qml/statusEnum.js;TYPE;javascript;")
-set(qml_import_scanner_import_37 "NAME;statusEnum.js;PATH;C:/Users/Asain/projects/qml-project/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/project/Page1.qml/statusEnum.js;TYPE;javascript;")
-set(qml_import_scanner_import_38 "NAME;data.js;PATH;C:/Users/Asain/projects/qml-project/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/project/Page1.qml/data.js;TYPE;javascript;")
-set(qml_import_scanner_import_39 "NAME;statusEnum.js;PATH;C:/Users/Asain/projects/qml-project/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/project/Page2.qml/statusEnum.js;TYPE;javascript;")
-set(qml_import_scanner_import_40 "NAME;statusEnum.js;PATH;C:/Users/Asain/projects/qml-project/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/project/Page3.qml/statusEnum.js;TYPE;javascript;")
 
