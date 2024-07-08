@@ -2,5 +2,6 @@
 
 CMakeLists.txt.*
 CMakeLists.txt.user.*
-build/*.o
-build/*.exe
+build/**/*.exe
+build/**/*.o
+
