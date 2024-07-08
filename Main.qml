@@ -22,7 +22,6 @@ ApplicationWindow {
                     NumberAnimation {
                         properties: "x"
                         duration: 100
-
                         from: stackView.width
                         to: 0
                     }
