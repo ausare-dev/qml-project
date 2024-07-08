@@ -48,29 +48,58 @@ Page {
             }
         }
         Text {
+            id: test
             text: "Cтатус элементов:"
             font.pointSize: 16
         }
         Rectangle {
-            Layout.fillHeight: true;
-            Layout.fillWidth: true;
+
+
+                Layout.fillHeight: true;
+                 Layout.fillWidth: true;
+
             border.color: "#ADD8E6"
             clip: true;
             ScrollView {
-                anchors.fill: parent
+                ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+                // background: Rectangle {
+                //             color: "black"
+                //         }
+                // contentWidth: parent.width
+                // anchors.fill: parent
+                height: parent.height
+                width: parent.width
+
                 contentWidth: parent.width
-                // contentHeight: parent.height
+                contentHeight: 1144
+                // Layout.fillHeight: true;
+                //  Layout.fillWidth: true;
+                // Layout.fillWidth: true  // Используем Layout.fillWidth вместо anchors.fill
+                //            Layout.fillHeight: true
+
+
+
             GridLayout {
                 id: grid
                 columns: 2
                 anchors.fill: parent
+
+
+                // Rectangle {
+                //     // anchors.fill: parent
+
+                //     color: "black"
+                // }
+
+
+
                 anchors.margins: 10
+
                 Repeater {
                     model: microphoneModel
                     Item {
-
                         Layout.minimumWidth: grid.width / grid.columns - 5
-                        height: grid.height/2
+                        height: 277
                         Rectangle {
                             anchors.fill: parent
                             color: {
