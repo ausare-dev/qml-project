@@ -17,9 +17,9 @@ qt_add_qml_module(appproject
     VERSION 1.0
     QML_FILES
         Main.qml
-        QML_FILES Page1.qml
-        QML_FILES Page2.qml
-        QML_FILES Page3.qml
+        QML_FILES HomePage.qml
+        QML_FILES MicrophoneDetailsPage.qml
+        QML_FILES HistoryFailurePage.qml
         QML_FILES data.js
         RESOURCES src/img/imge.png
 

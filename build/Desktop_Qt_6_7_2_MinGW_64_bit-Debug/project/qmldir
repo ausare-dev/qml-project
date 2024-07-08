@@ -2,7 +2,7 @@ module project
 typeinfo appproject.qmltypes
 prefer :/project/
 Main 1.0 Main.qml
-Page1 1.0 Page1.qml
-Page2 1.0 Page2.qml
-Page3 1.0 Page3.qml
+HomePage 1.0 HomePage.qml
+MicrophoneDetailsPage 1.0 MicrophoneDetailsPage.qml
+HistoryFailurePage 1.0 HistoryFailurePage.qml
 

@@ -17,7 +17,7 @@ ApplicationWindow {
     StackView {
         id: stackView
         anchors.fill: parent
-        initialItem: Page1 { }
+        initialItem: HomePage { }
         pushEnter: Transition {
                     NumberAnimation {
                         properties: "x"

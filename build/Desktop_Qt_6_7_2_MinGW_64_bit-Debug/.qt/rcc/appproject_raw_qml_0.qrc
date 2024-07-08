@@ -1,9 +1,9 @@
 <RCC>
   <qresource prefix="/project/">
     <file alias="Main.qml">C:/Users/Asain/projects/qml-project/Main.qml</file>
-    <file alias="Page1.qml">C:/Users/Asain/projects/qml-project/Page1.qml</file>
-    <file alias="Page2.qml">C:/Users/Asain/projects/qml-project/Page2.qml</file>
-    <file alias="Page3.qml">C:/Users/Asain/projects/qml-project/Page3.qml</file>
+    <file alias="HomePage.qml">C:/Users/Asain/projects/qml-project/HomePage.qml</file>
+    <file alias="MicrophoneDetailsPage.qml">C:/Users/Asain/projects/qml-project/MicrophoneDetailsPage.qml</file>
+    <file alias="HistoryFailurePage.qml">C:/Users/Asain/projects/qml-project/HistoryFailurePage.qml</file>
     <file alias="data.js">C:/Users/Asain/projects/qml-project/data.js</file>
     <file alias="statusEnum.js">C:/Users/Asain/projects/qml-project/statusEnum.js</file>
     <file alias="src/img/imge.png">C:/Users/Asain/projects/qml-project/src/img/imge.png</file>

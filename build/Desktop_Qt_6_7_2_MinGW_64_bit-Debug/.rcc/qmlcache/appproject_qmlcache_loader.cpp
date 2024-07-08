@@ -12,21 +12,21 @@ namespace _project_Main_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _project_Page1_qml { 
+namespace _project_HomePage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _project_Page2_qml { 
+namespace _project_MicrophoneDetailsPage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _project_Page3_qml { 
+namespace _project_HistoryFailurePage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -62,9 +62,9 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 
 Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/project/Main.qml"), &QmlCacheGeneratedCode::_project_Main_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/project/Page1.qml"), &QmlCacheGeneratedCode::_project_Page1_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/project/Page2.qml"), &QmlCacheGeneratedCode::_project_Page2_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/project/Page3.qml"), &QmlCacheGeneratedCode::_project_Page3_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/project/HomePage.qml"), &QmlCacheGeneratedCode::_project_HomePage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/project/MicrophoneDetailsPage.qml"), &QmlCacheGeneratedCode::_project_MicrophoneDetailsPage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/project/HistoryFailurePage.qml"), &QmlCacheGeneratedCode::_project_HistoryFailurePage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/project/data.js"), &QmlCacheGeneratedCode::_project_data_js::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/project/statusEnum.js"), &QmlCacheGeneratedCode::_project_statusEnum_js::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
