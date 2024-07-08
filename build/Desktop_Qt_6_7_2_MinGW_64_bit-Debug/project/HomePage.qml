@@ -138,13 +138,13 @@ Page {
                                             source: {
                                                 switch (model.status) {
                                                     case "Работает нормально":
-                                                        return "work.svg";
+                                                        return "src/icon/work.svg";
                                                     case "Вероятен сбой":
-                                                        return "warning.svg";
+                                                        return "src/icon/warning.svg";
                                                     case "Сбой":
-                                                        return "error.svg";
+                                                        return "src/icon/error.svg";
                                                     case "Микрофон не подключен":
-                                                        return "not_work.svg";
+                                                        return "src/icon/not_work.svg";
                                                 }
                                             }
                                         }

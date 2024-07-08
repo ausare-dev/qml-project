@@ -22,24 +22,24 @@ qt_add_qml_module(appproject
         QML_FILES HistoryFailurePage.qml
         QML_FILES data.js
         RESOURCES src/img/imge.png
+        RESOURCES src/icon/work.svg
 
-        RESOURCES close.svg
+        RESOURCES src/icon/close.svg
         RESOURCES
         RESOURCES
-        RESOURCES warning.svg
-        RESOURCES error.svg
-        RESOURCES not_work.svg
-        RESOURCES work.svg
-        RESOURCES restore.svg
-        RESOURCES mini.svg
+        RESOURCES src/icon/warning.svg
+        RESOURCES src/icon/error.svg
+        RESOURCES src/icon/not_work.svg
+        RESOURCES src/icon/restore.svg
+        RESOURCES src/icon/mini.svg
         RESOURCES
         RESOURCES
         RESOURCES
 
-        RESOURCES play.svg
-        RESOURCES statusHeight.svg
-        RESOURCES statusMedium.svg
-        RESOURCES statusLow.svg
+        RESOURCES src/icon/play.svg
+        RESOURCES src/icon/statusHeight.svg
+        RESOURCES src/icon/statusMedium.svg
+        RESOURCES src/icon/statusLow.svg
         QML_FILES statusEnum.js
 )
 

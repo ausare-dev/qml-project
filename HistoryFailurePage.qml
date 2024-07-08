@@ -70,7 +70,7 @@ Page {
                     ScrollView {
                         anchors.fill: parent
                                         contentWidth: parent.width
-                                        // contentHeight: parent.height
+
                                         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
                         Column {
                             width: parent.width
@@ -198,7 +198,7 @@ Page {
                                             Image {
 
                                                 id: status
-                                                source: model.probability.split('%')[0] > 60 ? "statusHeight.svg" : model.probability.split('%')[0] > 30 ? "statusMedium.svg" : "statusLow.svg"
+                                                source: model.probability.split('%')[0] > 60 ? "src/icon/statusHeight.svg" : model.probability.split('%')[0] > 30 ? "src/icon/statusMedium.svg" : "src/icon/statusLow.svg"
                                                 height: 40
                                                 width: 40
 
