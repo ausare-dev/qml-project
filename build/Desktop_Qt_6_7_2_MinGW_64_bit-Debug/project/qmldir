@@ -1,8 +1,0 @@
-module project
-typeinfo appproject.qmltypes
-prefer :/project/
-Main 1.0 Main.qml
-HomePage 1.0 HomePage.qml
-MicrophoneDetailsPage 1.0 MicrophoneDetailsPage.qml
-HistoryFailurePage 1.0 HistoryFailurePage.qml
-
