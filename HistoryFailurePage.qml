@@ -261,5 +261,28 @@ Page {
 
         }
 
+        Component.onCompleted: {
+                var request = new XMLHttpRequest()
+                request.open('GET', 'http://127.0.0.1:8000/api/microphones')
+                request.onreadystatechange = function() {
+                    if (request.readyState === XMLHttpRequest.DONE) {
+                        if (request.status === 200) {
+                            microphoneModel.clear()
+                            var response = JSON.parse(request.responseText)
+                            for (var i = 0; i < response.length; i++) {
+                                microphoneModel.append(response[i])
+                            }
+                        } else {
+                            console.log('Failed to load data')
+                        }
+                    }
+                }
+                request.send()
+            }
+
+        ListModel {
+            id: microphoneModel
+        }
+
 
 }

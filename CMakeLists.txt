@@ -41,6 +41,8 @@ qt_add_qml_module(appproject
         RESOURCES src/icon/statusMedium.svg
         RESOURCES src/icon/statusLow.svg
         QML_FILES statusEnum.js
+        RESOURCES server.py
+        RESOURCES data.json
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

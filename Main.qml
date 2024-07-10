@@ -35,7 +35,6 @@ ApplicationWindow {
 
     }
 
-    ListModel {
-        id: microphoneModel
-    }
+
+
 }
