@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import "data.js" as DataModel
 
 ApplicationWindow {
     visible: true
@@ -10,9 +9,7 @@ ApplicationWindow {
     minimumWidth: 1111
        minimumHeight: 700
     title: "СПО \"СПАД\""
-    Component.onCompleted: {
-        microphoneModel.append(DataModel.getMicrophoneData())
-    }
+
 
     StackView {
         id: stackView

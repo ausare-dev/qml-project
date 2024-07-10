@@ -20,7 +20,7 @@ qt_add_qml_module(appproject
         QML_FILES HomePage.qml
         QML_FILES MicrophoneDetailsPage.qml
         QML_FILES HistoryFailurePage.qml
-        QML_FILES data.js
+        QML_FILES
         RESOURCES src/img/imge.png
         RESOURCES src/icon/work.svg
 

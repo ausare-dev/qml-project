@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import "statusEnum.js" as StatusEnum
-import "data.js" as DataModel
 Page {
     id: page1
     padding: 15;
@@ -68,11 +67,11 @@ Page {
 
                 contentWidth: parent.width
                 contentHeight: {
-                    if(DataModel.getLength()%2===0){
-                        return 143*DataModel.getLength()
-                    } else {
-                        return 143*(DataModel.getLength()+1)
-                    }
+                    if (microphoneModel.count % 2 === 0) {
+                                           return 143 * microphoneModel.count
+                                       } else {
+                                           return 143 * (microphoneModel.count + 1)
+                                       }
                 }
 
             GridLayout {
