@@ -43,6 +43,7 @@ qt_add_qml_module(appproject
         QML_FILES statusEnum.js
         RESOURCES server.py
         RESOURCES data.json
+        QML_FILES constants.js
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

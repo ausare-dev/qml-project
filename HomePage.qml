@@ -2,22 +2,23 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import "statusEnum.js" as StatusEnum
+import "constants.js" as Colors
 Page {
     id: page1
     padding: 15;
     background: Rectangle {
-                color: "white"
+                color: Colors.theme.bgColor
             }
     Rectangle {
         width: 200
         height: 30
-        color: "#ADD8E6"
+        color: Colors.theme.primaryColor
         anchors.right: parent.right;
         Text {
             anchors.centerIn: parent
             text: "История сбоев"
             font.pointSize: 14
-            color: "white"
+            color: Colors.theme.bgColor
         }
         MouseArea {
             anchors.fill: parent
@@ -36,13 +37,13 @@ Page {
             Rectangle {
                 height: 30
                 width: 200
-                color: "#ADD8E6"
+                color: Colors.theme.primaryColor
                 Text {
                     anchors.centerIn: parent
                     text: StatusEnum.getStatusText(StatusEnum.StatusEnum.Running)
                     font.pointSize: 16
                     font.bold: true
-                    color: "white"
+                    color: Colors.theme.bgColor
                 }
             }
         }
@@ -57,7 +58,7 @@ Page {
                 Layout.fillHeight: true;
                  Layout.fillWidth: true;
 
-            border.color: "#ADD8E6"
+            border.color: Colors.theme.primaryColor
             clip: true;
             ScrollView {
                 ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
@@ -93,15 +94,15 @@ Page {
                             color: {
                                     switch (model.status) {
                                         case "Работает нормально":
-                                            return "lightgreen";
+                                            return Colors.theme.lightGreen;
                                         case "Вероятен сбой":
-                                            return "yellow";
+                                            return Colors.theme.yellow;
                                         case "Сбой":
-                                            return "red";
+                                            return Colors.theme.red;
                                         case "Микрофон не подключен":
-                                            return "lightgray";
+                                            return Colors.theme.lightGray;
                                         default:
-                                            return "lightgray";
+                                            return Colors.theme.lightGray;
                                     }
                                 }
                             MouseArea {

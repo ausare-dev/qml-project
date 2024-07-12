@@ -2,12 +2,13 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import "statusEnum.js" as StatusEnum
+import "constants.js" as Colors
 Page {
     id: page2
     padding: 15
     property var microphoneData
     background: Rectangle {
-                color: "white"
+                color: Colors.theme.bgColor
             }
     ColumnLayout {
         anchors.fill: parent
@@ -24,14 +25,14 @@ Page {
             Rectangle {
                 height: 30
                 width: 200
-                color: "#ADD8E6"
+                color: Colors.theme.primaryColor
 
                 Text {
                     anchors.centerIn: parent
                     text: StatusEnum.getStatusText(StatusEnum.StatusEnum.Running)
                     font.pointSize: 16
                     font.bold: true
-                    color: "white"
+                    color: Colors.theme.bgColor
                 }
             }
         }
@@ -47,10 +48,10 @@ Page {
             Rectangle {
                 Layout.fillHeight: true;
                 Layout.fillWidth: true;
-                border.color: "#ADD8E6"
+                border.color: Colors.theme.primaryColor
                 Rectangle {
                     anchors.margins: 10
-                    color: "#F0F0F0"
+                    color: Colors.theme.bgGray
                     anchors.fill: parent
                     Row {
                         spacing: 10
@@ -74,10 +75,10 @@ Page {
                                     height: 40
                                     icon.name: "close"
                                     icon.source: "src/icon/close.svg"
-                                    icon.color: "#ADD8E6"
+                                    icon.color: Colors.theme.primaryColor
                                     background: Rectangle {
-                                        color: "white"
-                                        border.color: "#ADD8E6"
+                                        color: Colors.theme.bgColor
+                                        border.color: Colors.theme.primaryColor
                                     }
                                     MouseArea {
                                             anchors.fill: parent
@@ -166,14 +167,14 @@ Page {
                         id: playButton
                         icon.name: "play"
                         icon.source: "src/icon/play.svg"
-                        icon.color: "#ADD8E6"
+                        icon.color: Colors.theme.primaryColor
                         icon.height: 50
                         icon.width: 50
 
                         background: Rectangle {
                             id: buttonBackground
-                            color: "white"
-                            border.color: "#ADD8E6"
+                            color: Colors.theme.bgColor
+                            border.color: Colors.theme.primaryColor
                         }
                          Layout.alignment: Qt.AlignHCenter
                          property bool isClicked: false
@@ -182,13 +183,13 @@ Page {
                                         onClicked: {
                                             playButton.isClicked = !playButton.isClicked
                                             if (playButton.isClicked) {
-                                                buttonBackground.color = "#ADD8E6"
-                                                playButton.icon.color = "white"
-                                                buttonBackground.border.color = "white"
+                                                buttonBackground.color = Colors.theme.primaryColor
+                                                playButton.icon.color = Colors.theme.bgColor
+                                                buttonBackground.border.color = Colors.theme.bgColor
                                             } else {
-                                                buttonBackground.color = "white"
-                                                playButton.icon.color = "#ADD8E6"
-                                                buttonBackground.border.color = "#ADD8E6"
+                                                buttonBackground.color = Colors.theme.bgColor
+                                                playButton.icon.color = Colors.theme.primaryColor
+                                                buttonBackground.border.color = Colors.theme.primaryColor
                                             }
                                         }
                                     }

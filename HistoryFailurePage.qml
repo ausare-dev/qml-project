@@ -2,22 +2,23 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import "statusEnum.js" as StatusEnum
+import "constants.js" as Colors
 Page {
     id: page3
     padding: 15;
     background: Rectangle {
-                color: "white"
+                color: Colors.theme.bgColor
             }
     Rectangle {
             width: 200
             height: 30
-            color: "#ADD8E6"
+            color: Colors.theme.primaryColor
             anchors.right: parent.right;
             Text {
                 anchors.centerIn: parent
                 text: "Статус системы"
                 font.pointSize: 14
-                color: "white"
+                color: Colors.theme.bgColor
             }
             MouseArea {
                 anchors.fill: parent
@@ -39,14 +40,14 @@ Page {
                 Rectangle {
                     height: 30
                     width: 200
-                    color: "#ADD8E6"
+                    color: Colors.theme.primaryColor
 
                     Text {
                         anchors.centerIn: parent
                         text: StatusEnum.getStatusText(StatusEnum.StatusEnum.Running)
                         font.pointSize: 16
                         font.bold: true
-                        color: "white"
+                        color: Colors.theme.bgColor
                     }
                 }
             }
@@ -57,12 +58,12 @@ Page {
             Rectangle {
                 Layout.fillHeight: true;
                 Layout.fillWidth: true;
-                color: "white"
-                border.color: "#ADD8E6"
+                color: Colors.theme.bgColor
+                border.color: Colors.theme.primaryColor
                 clip: true;
                 Rectangle {
                     anchors.margins: 10
-                    color: "white"
+                    color: Colors.theme.bgColor
                     anchors.fill: parent
 
 
@@ -84,48 +85,48 @@ Page {
                                     height: 40
 
                                     width: parent.width/4
-                                    color: "#ADD8E6"
+                                    color: Colors.theme.primaryColor
                                     Text {
                                         anchors.centerIn: parent
                                         text: "Сбой"
                                         font.pointSize: 14
-                                        color: "white"
+                                        color: Colors.theme.bgColor
                                     }
                                 }
                                 Rectangle {
                                     height: 40
                                     width: parent.width/7
 
-                                    color: "#ADD8E6"
+                                    color: Colors.theme.primaryColor
                                     Text {
                                         anchors.centerIn: parent
                                         text: "Дата/время"
                                         font.pointSize: 14
-                                        color: "white"
+                                        color: Colors.theme.bgColor
                                     }
                                 }
                                 Rectangle {
                                     height: 40
                                     width: parent.width/5
 
-                                    color: "#ADD8E6"
+                                    color: Colors.theme.primaryColor
                                     Text {
                                         anchors.centerIn: parent
                                         text: "Вероятность"
                                         font.pointSize: 14
-                                        color: "white"
+                                        color: Colors.theme.bgColor
                                     }
                                 }
                                 Rectangle {
                                     height: 40
                                     width: parent.width/5
 
-                                    color: "#ADD8E6"
+                                    color: Colors.theme.primaryColor
                                     Text {
                                         anchors.centerIn: parent
                                         text: "Статус"
                                         font.pointSize: 14
-                                        color: "white"
+                                        color: Colors.theme.bgColor
                                     }
                                 }
                                 Rectangle {
@@ -133,12 +134,12 @@ Page {
 
                                     width: parent.width/4.9
 
-                                    color: "#ADD8E6"
+                                    color: Colors.theme.primaryColor
                                     Text {
                                         anchors.centerIn: parent
                                         text: "Посл. обн. статуса"
                                         font.pointSize: 14
-                                        color: "white"
+                                        color: Colors.theme.bgColor
                                     }
                                 }
 
@@ -149,7 +150,7 @@ Page {
                             Rectangle {
                                 width: parent.width
                                 height: 55
-                                border.color: "#ADD8E6"
+                                border.color: Colors.theme.primaryColor
                                 Row {
                                     spacing: 3
                                     width: parent.width
