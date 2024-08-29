@@ -1,4 +1,4 @@
-- # Microphones Panel
+# Microphones Panel
 
 <img src="" width="100%" height="auto" />
 
