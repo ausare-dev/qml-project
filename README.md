@@ -1,6 +1,6 @@
 # Microphones Panel
 
-<img src="" width="100%" height="auto" />
+<img src="demo.gif" width="100%" height="auto" />
 
 ### Описание
 
